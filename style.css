@@ -246,8 +246,24 @@ h2 {
     padding-top: 10px;
   }
 }
+@media (min-width: 375px) and (max-width: 550px) {
+  .section2 {
+    display: none;
+  }
+  #main {
+    width: 90vw;
+    height: 90vh;
+  }
+  #thankYou_container {
+    width: 80vw;
+    height: 50vh;
+  }
+  #submit_btn {
+    margin-top: 40px;
+  }
+}
 
-@media (min-width: 375px) and (max-width: 800px) {
+@media (min-width: 500px) and (max-width: 800px) {
   #main {
     width: 90vw;
     height: 90vh;

@@ -15,7 +15,6 @@ let inputValue = email.value;
 
 function setError(email, message) {
   const inputparent = email.parentElement;
-  console.log(inputparent);
   const errorDisplay = inputparent.querySelector(".error");
 
   errorDisplay.innerText = message;
