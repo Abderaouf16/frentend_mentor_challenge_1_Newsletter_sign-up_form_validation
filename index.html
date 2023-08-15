@@ -8,15 +8,15 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-  
+
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
   <style>
   </style>
 </head>
 
 <body>
-  <main id="main" >
-    <div >
+  <main id="main">
+    <div class="parent">
       <!-- section 1 -->
       <section class="section1">
         <div class="container">
@@ -24,31 +24,43 @@
           <p>join 60,000+ product managers receiving monthly updates on:</p>
           <div class="points_container">
             <div class="points">
-              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
-                <g fill="none">
-                  <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
-                  <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
-                </g>
-              </svg>
+              <div class="svg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+                  <g fill="none">
+                    <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+                    <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+                  </g>
+                </svg>
+
+              </div>
               <p>Product discovery and building what matters</p>
             </div>
             <div class="points">
-              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
-                <g fill="none">
-                  <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
-                  <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
-                </g>
-              </svg>
+              <div class="svg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+                  <g fill="none">
+                    <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+                    <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+                  </g>
+                </svg>
+
+              </div>
               <p> Measuring to ensure updates are a success</p>
             </div>
             <div class="points">
-              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
-                <g fill="none">
-                  <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
-                  <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
-                </g>
-              </svg>
-              <p>And much more!</p>
+              <div class="svg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+                  <g fill="none">
+                    <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+                    <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+                  </g>
+                </svg>
+
+              </div>
+              <div class="">
+                <p>And much more!</p>
+
+              </div>
             </div>
           </div>
           <form action="" id="form">
@@ -57,9 +69,9 @@
                 <label for="email_input">Email address</label>
                 <div class="error"></div>
               </div>
-              <input type="text" id="email_input" placeholder="Email@gmail.com" >
+              <input type="text" id="email_input" placeholder="Email@gmail.com">
             </div>
-            <button type="submit" id="submit_btn" >Subscribe to monthly newsletter</button>
+            <button type="submit" id="submit_btn">Subscribe to monthly newsletter</button>
         </div>
         </form>
       </section>
@@ -72,18 +84,27 @@
 
   <div class="hidden" id="thankYou_container">
     <div class="thankYou_content">
-      <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
-        <g fill="none">
-          <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
-          <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
-        </g>
-      </svg>
-      <h2>Thanks for subscribing!</h2>
-      <p>Aconfirmation email has been sent to<br> ... Please open it and click the button to confirm your subscription
-      </p>
-      <button id="dismiss_btn">Dismiss message</button>
+      <div class="">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+          <g fill="none">
+            <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+            <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8" />
+          </g>
+        </svg>
+        <h2>Thanks for subscribing!</h2>
+        <p>Aconfirmation email has been sent to
+        <p id="chosen_email"></p> .Please open it and click the button
+        inside to confirm your subscription
+        </p>
+      </div>
+      <div class="dismassBtn_container">
+        <button id="dismiss_btn">Dismiss message</button>
+
+      </div>
     </div>
   </div>
+  <div class="spinner"></div>
 </body>
 <script src="index.js"></script>
+
 </html>

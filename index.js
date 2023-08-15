@@ -2,10 +2,12 @@ const email = document.getElementById("email_input");
 const submitBtn = document.getElementById("submit_btn");
 const form = document.getElementById("form");
 
-// for validation 
+console.log(email.value);
+// for validation
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  getWrittenEmail();
   checkValidation();
 });
 
@@ -42,26 +44,32 @@ function checkValidation() {
     setError(email, "Email is required");
   } else if (!isValidEmail(inputValue)) {
     setError(email, "Valid email required");
-    e.preventDefault();
   } else {
     setSuccess(email);
-    acceptForm()
+    acceptForm();
   }
 }
 
 // for displaying the thanks page
-const secondPage = document.getElementById('thankYou_container');
+const secondPage = document.getElementById("thankYou_container");
 const firstPage = document.getElementById("main");
 
 function acceptForm() {
-    firstPage.style.display= 'none'
-    secondPage.style.display='flex'
+  firstPage.style.display = "none";
+  secondPage.style.display = "flex";
 }
 
 //  for hidding the thanks page and go back to the main 'first' page
 const dismissBtn = document.getElementById("dismiss_btn");
-dismissBtn.addEventListener('click', function(){
-    secondPage.style.display= 'none'
-    firstPage.style.display='flex'
-    location.reload();
-})
+dismissBtn.addEventListener("click", function () {
+  secondPage.style.display = "none";
+  firstPage.style.display = "flex";
+  location.reload();
+});
+
+/* display the email written in the input and display it in the thanks page*/
+const chosenEmail = document.getElementById("chosen_email");
+function getWrittenEmail() {
+  let writtenValue = email.value;
+  chosenEmail.textContent = writtenValue;
+}
